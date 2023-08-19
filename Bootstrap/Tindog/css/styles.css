@@ -28,6 +28,8 @@ h2 {
 h3 {
   font-family: "Montserrat";
   font-weight: 800 !important;
+  color: white !important;
+
 }
 
 p {
@@ -133,4 +135,38 @@ p {
 
 .pricing-column {
   padding: 3% 2%;
+}
+
+/* CTA Section */
+
+#cta {
+  background-color: #ff4c68;
+  padding: 7% 15%;
+  text-align: center;
+  font-size: 2rem !important;
+}
+
+/* Footer Section */
+
+#footer {
+  padding: 7% 15%;
+  text-align: center;
+}
+
+#footer i {
+  margin: 2% 1%;
+}
+
+
+@media screen and (max-width: 990px) {
+
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    transform: rotate(0);
+  }
+
 }
