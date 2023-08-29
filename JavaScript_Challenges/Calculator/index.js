@@ -34,5 +34,4 @@ var myFunction = function (e){
 
 function submit(){
   myFunction();
-  
 }
