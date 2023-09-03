@@ -17,9 +17,6 @@
 // Add To All Buttons
 
 function handleClick() {
-  // alert("I got Clicked");
-  // var audio  = new Audio("sounds/tom-1.mp3"); 
-  // audio.play();
 
   this.style.color = "white";
 }
