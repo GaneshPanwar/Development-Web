@@ -1,5 +1,3 @@
-
-
 // Using Function
 // document.querySelector("button").addEventListener("click", handleClick);
 
@@ -13,14 +11,32 @@
 //   // What to do when click detected
 // }); 
 
+// Detecting Button Pressed
 
-// Add To All Buttons
+var numberOfDrumButtons = document.querySelectorAll(".drum").length;
 
-function handleClick() {
+for (var i = 0; i < numberOfDrumButtons; i++) {
+  document.querySelectorAll(".drum")[i].addEventListener("click", function () {
 
-  var buttonInnerHTML = this.innerHTML;
+    var buttonInnerHTML = this.innerHTML;
 
-  switch (buttonInnerHTML) {
+    makeSound(buttonInnerHTML);
+
+    buttonAnimation(buttonInnerHTML);
+  });
+}
+
+// Detecting Keyboard Button Pressed
+
+document.addEventListener("keypress", function (event) {
+
+  makeSound(event.key);
+  buttonAnimation(event.key);
+
+});
+
+function makeSound(key) {
+  switch (key) {
     case "w":
       var tom1 = new Audio("sounds/tom-1.mp3");
       tom1.play();
@@ -51,19 +67,24 @@ function handleClick() {
       crash.play();
       break;
 
-    case "l ":
-      var kick = new Audio("sounds/kick.mp3");
+    case "l":
+      var kick = new Audio("sounds/kick-bass.mp3");
       kick.play();
       break;
 
-    default: 
-       console.log(buttonInnerHTML);
+    default:
+      console.log(key);
 
   }
 }
 
-var numberOfDrumButtons = document.querySelectorAll(".drum").length;
+function buttonAnimation(currentKey) {
 
-for (var i = 0; i < numberOfDrumButtons; i++) {
-  document.querySelectorAll(".drum")[i].addEventListener("click", handleClick);
+  var activeButton = document.querySelector("." + currentKey);
+
+  activeButton.classList.add("pressed");
+
+  setTimeout(function () {
+    activeButton.classList.remove("pressed");
+  }, 200);
 }
