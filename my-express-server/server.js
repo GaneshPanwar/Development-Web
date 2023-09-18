@@ -14,7 +14,6 @@ app.get("/about", function(req, res){
 res.send("Hello Everyone, My Name is Ganesh and I am Learning Web Development");
 });
 
-
 app.listen(3000, function(){
   console.log("Server is started at port 3000");
 });
