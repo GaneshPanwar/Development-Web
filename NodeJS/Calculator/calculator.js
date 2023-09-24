@@ -39,4 +39,3 @@ app.post("/bmicalculator", function (req, res) {
 app.listen(3000, function () {
   console.log("Server is Started at Port 3000");
 });
-

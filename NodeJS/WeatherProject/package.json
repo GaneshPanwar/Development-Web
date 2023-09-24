@@ -1,0 +1,14 @@
+{
+  "name": "weatherproject",
+  "version": "1.0.0",
+  "description": "Showing Weather using OpenWeatherAPI",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ganesh Panwar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
