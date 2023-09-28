@@ -113,26 +113,28 @@
 
 
   <main class="form-signin w-100 m-auto">
-    <form>
+    <form action="/" method="post">
       <img class="mb-4" src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72"
         height="57">
       <h1 class="h3 mb-3 fw-normal">SignUp To My NewsLetter!</h1>
 
       <div class="form-floating">
-        <input type="text" class="form-control" id="floatingInput" placeholder="First Name" required autofocus>
+        <input type="text" name="fName" class="form-control" id="floatingInput" placeholder="First Name" required
+          autofocus>
         <label for="floatingInput">First Name</label>
       </div>
       <div class="form-floating">
-        <input type="text" class="form-control" id="floatingInput1" placeholder="Last Name" required>
+        <input type="text" name="lName" class="form-control" id="floatingInput1" placeholder="Last Name" required>
         <label for="floatingInput1">Last Name</label>
       </div>
       <div class="form-floating">
-        <input type="email" class="form-control" id="floatingPassword" placeholder="Email Address" required>
+        <input type="email" name="email" class="form-control" id="floatingPassword" placeholder="Email Address"
+          required>
         <label for="floatingPassword">Email Address</label>
       </div>
 
 
-      <button class="btn btn-primary w-100 py-2" type="submit">Sign Me  Up!</button>
+      <button class="btn btn-primary w-100 py-2" type="submit">Sign Me Up!</button>
       <p class="mt-5 mb-3 text-body-secondary">&copy; Ganesh Panwar</p>
     </form>
   </main>
