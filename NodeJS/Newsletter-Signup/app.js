@@ -4,13 +4,17 @@ const request = require("request");
 
 const app = express();
 
-const API_KEY = "91c5d03b22652b7928065c805555dfc6-us10";
+const _API_KEY = "91c5d03b22652b7928065c805555dfc6-us10";
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/signup.html");
+});
+
+request.get(_API_KEY, function(){
+  
 });
 
 app.post("/", function(req, res){
